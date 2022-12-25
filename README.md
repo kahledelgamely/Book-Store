@@ -7,11 +7,9 @@
     Book-IT is an online React web application where the customer can purchase books online.
     Through this book store the users can search for a book by its title and
     later can add to the shopping cart.
-    
- ##   [Live App Demo]()
  
- 
- ![Alt text](https://github.com/kahledelgamely/Book-Store/blob/master/bookcenter/src/assets/Web.jpg "Main Page")
+<img src="./src/assets/Screenshot1.png" height="250px" align="right"/>
+<img src="./src/assets/Screenshot2.png" height="250px" align="right"/>
 
 # Tools Used
 

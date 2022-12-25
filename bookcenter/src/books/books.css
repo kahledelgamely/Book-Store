@@ -1,0 +1,15 @@
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+input {
+    border: none;
+    border-bottom: 1px solid rgb(141, 140, 140);
+    margin-left: 10px;
+
+}
+input:focus {
+    outline: none;
+}

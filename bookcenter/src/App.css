@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+  
+}
+.container{
+  min-height:calc(100vh - (50px + 340px)) ;
+  display: flex;
+  flex-direction: column;
+}
+
+.cartHidden {
+  display: none;
+}

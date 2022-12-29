@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import Book from '../Book'
 import "./books.css"
 import { BsSearch } from "react-icons/bs"
-import {books} from "../data"
 
 
-const Books = () => {
+
+const Books = ({books}) => {
     const [searchTerm, setSearchTerm] = useState("")
 
 

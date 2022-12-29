@@ -14,7 +14,6 @@
 # Tools Used
 
 - Build with `React`,`Redux Toolkit`,`Javascript`, `Material Ui`
-- I Also Build My Own server Whom Fetch Data from
 
 
 # Getting Started with Create React App

@@ -7,19 +7,12 @@ import { getCartHidden, getCartShown } from '../store/cartSlice';
 
 
 const Header = () => {
-    const { error } = useSelector(state => state.books);
     const { cart, isCartVisible } = useSelector(state => state.cartStore);
-
-
 
     const dispatch = useDispatch()
 
-
-
     return (
         <Fragment>
-
-            {error && (<div className= 'alert alert-danger mb-0'>{error}</div>)}
             <nav className="navbar navbar-expand-lg position-fixed w-100 top-0 " style={{ backgroundColor: '#1c2331', zIndex: "3", marginBottom: "15px" }}>
                 <div className="container-fluid">
                     <Link className="navbar-brand clr-wt" onClick={()=>dispatch(getCartShown())}  to="/">BOOK-IT</Link>

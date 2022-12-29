@@ -1,5 +1,4 @@
-{
-     "books": [
+export const books = [
             {
                 "id": 1,
                 "title": "As a Man Thinketh",
@@ -52,5 +51,4 @@
                 "photo":"https://m.media-amazon.com/images/I/91is9-x5AbL.jpg",
                 "description": "It is known as special relativity because it applies only to special cases: frames of reference in constant, unchanging motion. In 1915, Einstein published the general theory of relativity, which applies to frames that are accelerating with regard to each other. Time does not pass at the same rate for everyone."
               }
-    ]
-}
+]

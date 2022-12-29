@@ -2,12 +2,10 @@ import React, { useState } from 'react'
 import Book from '../Book'
 import "./books.css"
 import { BsSearch } from "react-icons/bs"
-import { useSelector } from 'react-redux';
+import {books} from "../data"
 
 
 const Books = () => {
-
-    const { books } = useSelector(state => state.books)
     const [searchTerm, setSearchTerm] = useState("")
 
 

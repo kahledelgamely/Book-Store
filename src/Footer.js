@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <MDBFooter color="unique-color-dark" className="font-small pt-2 mt-2 text-white " style={{
             backgroundColor: "rgb(28, 35, 49)"
-            
+
         }}>
             <MDBContainer className="text-center text-md-left">
                 <MDBRow className="text-center text-md-left mt-3 pb-3">
@@ -40,16 +40,16 @@ const Footer = () => {
                 <hr />
                 <MDBRow className="d-flex align-items-center">
                     <MDBCol md="8" lg="8">
-                        <p className="text-center text-md-left text-secondary">
+                        <p className="text-md-left text-secondary d-flex justify-content-center gap-3 align-items-center">
                             &copy; {new Date().getFullYear()} Made by
-                            <a href="" style={{ textDecoration: "none", color: "white" }}> Khaled Elgamely</a>
+                            <p style={{ textDecoration: "none", color: "white", marginBottom: "0" }}> Khaled Elgamely</p>
                         </p>
                     </MDBCol>
                     <MDBCol md="4" lg="4" className="ml-lg-0">
                         <div className="text-center text-md-right">
                             <ul className="list-unstyled list-inline">
                                 <li className="list-inline-item">
-                                    <a className="btn-floating btn-sm rgba-white-slight mx-1 text-white" href="https://github.com/kahledelgamely">
+                                    <a className="btn-floating btn-sm rgba-white-slight mx-1 text-white" href="https://github.com/khaledelgamely">
                                         <i className="fab fa-github" />
                                     </a>
                                 </li>

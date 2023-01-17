@@ -2,10 +2,13 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 export const cartSlice = createSlice({
-    initialState: { cart: [], isCartVisible : true},
+    initialState: {
+        cart: localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [],
+        isCartVisible: true
+    },
     name: "cartStore",
     reducers: {
-        addToCart:(state, action)=> {
+        addToCart: (state, action) => {
             const foundItem = state.cart.find(item => item.id === action.payload.id)
             if (foundItem) {
                 foundItem.quantity += 1;
@@ -13,15 +16,19 @@ export const cartSlice = createSlice({
                 const cartClone = { ...action.payload, quantity: 1 }
                 state.cart.push(cartClone)
             }
+            localStorage.setItem("cart", JSON.stringify(state.cart))
         },
-        deleteItem:(state, action)=> {
+        deleteItem: (state, action) => {
             const removeItem = state.cart.filter(item => item.id !== action.payload.id)
             state.cart = removeItem
+            localStorage.setItem("cart", JSON.stringify(state.cart))
         },
-        clearCart:(state, action)=> {
+        clearCart: (state, action) => {
             state.cart = []
+            localStorage.setItem("cart", JSON.stringify(state.cart))
+
         },
-        decreaseItemQuantity:(state, action)=> {
+        decreaseItemQuantity: (state, action) => {
             const foundItem = state.cart.find(item => item.id === action.payload.id)
             if (foundItem.quantity > 1) {
                 foundItem.quantity -= 1;
@@ -31,10 +38,10 @@ export const cartSlice = createSlice({
                 return
             }
         },
-        getCartHidden:(state, action)=> {
+        getCartHidden: (state, action) => {
             state.isCartVisible = false
         },
-        getCartShown:(state, action)=> {
+        getCartShown: (state, action) => {
             state.isCartVisible = true
         }
     },
